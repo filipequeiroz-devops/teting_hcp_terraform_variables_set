@@ -7,6 +7,12 @@ terraform {
   }
 }
 
+#This varibles is on HCP terraform workspace variables set, so we can use it in the provider block
+variable "aws_region" {
+  type        = string
+  description = "Região da AWS para deploy"
+}#
+
 provider "aws" {
   region = var.aws_region
 }
